@@ -6,11 +6,11 @@
 }
 
 header {
-    background-color: rgb(192, 226, 255);
+    background-color: rgb(49, 49, 49);
 }
 
 .container {
-    background-color: rgb(192, 226, 255);
+    background-color: rgb(172, 172, 172);
 }
 
 a {
@@ -18,17 +18,16 @@ a {
     color: inherit;
 }
 
-header .container{ /* estiliza o cabeçalho */
+header .container-header{ /* estiliza o cabeçalho */
     display: flex;
     padding: 16px 16px 2px 16px;
     justify-content: center; 
     align-items: center;     
     border-bottom: 2px solid #ffffff;
-    max-width: 500px;
     margin: 0 auto;
     font-size: 2em;
     font-style: italic;
-    color: rgb(74, 89, 99);
+    color: rgb(206, 206, 206);
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.507);
 }
 
@@ -44,13 +43,14 @@ header .container{ /* estiliza o cabeçalho */
     justify-content: center; /* Centraliza o grid */
     padding-left: 100px;     /* Espaço lateral esquerdo */
     padding-right: 100px;    /* Espaço lateral direito */
-    background: linear-gradient( /* gradiente de azul */
+    
+    background: linear-gradient( /* gradiente de Preto */
         90deg,
-        #b3d8ff 0%,
-        #76bfff 25%,
-        #6ca4fd 50%,
-        #43a3f1 75%,
-        #218cff 100%
+        #000000 0%,
+        #6b6b6b 25%,
+        #575757 50%,
+        #969696 75%,
+        #000000 100%
     );
     border-radius: 24px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
@@ -80,7 +80,7 @@ section.sobre-mim { /* estiliza a seção sobre mim */
     padding-bottom: 24px;
     background: linear-gradient( /* gradiente de cor para a seção*/
         180deg,
-        rgb(192, 226, 255) 0%,
+        rgb(0, 0, 0) 0%,
         #e3f2fd 100%
     );
 }
@@ -88,7 +88,7 @@ section.sobre-mim { /* estiliza a seção sobre mim */
 section.formacao-e-idiomas {
     background: linear-gradient(
         180deg,
-        rgb(192, 226, 255) 0%,
+        rgb(0, 0, 0) 0%,
         #f1f8e9 100%
     );
 }
@@ -111,7 +111,7 @@ section.projetos a {
 section.contato {
     background: linear-gradient(
         180deg,
-        rgb(192, 226, 255) 0%,
+        rgb(0, 0, 0) 0%,
         #ffebee 100%
     );
 }
@@ -125,8 +125,8 @@ section.contato {
 .grid-imagens button {
     width: 100%; /* Mesma largura da imagem */
     height: 32px;
-    background-color: rgb(74, 89, 199); /* Azul */
-    color: #fff;
+    background-color: rgb(221, 221, 221); /* Preto */
+    color: #000000;
     border: none;
     border-radius: 8px;
     font-size: 1em;
@@ -138,7 +138,7 @@ section.contato {
 }
 
 .grid-imagens button:hover {
-    background-color: rgb(40, 60, 160); /* Azul mais escuro ao passar o mouse */
+    background-color: rgb(20, 20, 20); /* mais escuro ao passar o mouse */
 }
 
 section.sobre-mim,
@@ -151,7 +151,7 @@ section.contato {
     border-radius: 24px;
     background: linear-gradient(
         180deg,
-        rgb(192, 226, 255) 0%,
+        rgb(0, 0, 0) 0%,
         #e3f2fd 100%
     );
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -185,12 +185,12 @@ section.sobre-mim h2,
 section.formacao-e-idiomas h2,
 section.projetos h2,
 section.contato h2 {
-    color: rgb(74, 89, 199);
+    color: rgb(255, 255, 255);
     font-size: 2em;
     margin-bottom: 8px;
     margin-top: 0;
     font-weight: 700;
-    border-bottom: 2px solid #bdbdbd;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 8px;
     width: 100%;
     text-align: left;
@@ -202,9 +202,10 @@ section.projetos p,
 section.contato p {
     margin-top: 16px;
     font-size: 1.2em;
-    color: #333;
+    color: #ffffff;
     text-align: left;
     line-height: 1.6;
+    text-shadow: #000000 1px 1px 2px;
 }
 
 section.formacao-e-idiomas li {
@@ -258,7 +259,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #2986ff;
+    background-color: #272727;
 }
 
 
