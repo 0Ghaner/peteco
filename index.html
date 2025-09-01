@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet"> <!-- fonte Roboto -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header> <!-- separa o cabeçalho do resto do código para estilizar -->
+        <div class="container">
+            <h1>Meu portifólio</h1>
+        </div>
+    </header>
+    <div class="container conteudo">
+        <section class="grid-imagens"> <!-- grid para separar em 4 colunas -->
+            <a href="#sobre-mim">
+                <img src="/images/mediquio.png" alt="Medico">
+                <button type="button">Sobre Mim</button>
+            </a>
+            <a href="#formacao-e-idiomas">
+                <img src="/images/formacao.jpg" alt="formacao">
+                <button type="button">Formação e Idiomas</button>
+            </a>
+            <a href="#projetos">
+                <img src="/images/portfolio.jpg" alt="portfolio">
+                <button type="button">Projetos</button>
+            </a>
+            <a href="#contato">
+                <img src="/images/contato.jpg" alt="telefone">
+                <button type="button">Contato</button>
+            </a>
+        </section>
+        <section id="sobre-mim" class="sobre-mim"> <!-- Seção para separar temas -->
+            <img src="./images/euio.png" alt="eu">
+            <h2>Sobre mim</h2>
+            <p>Chamo-me Emerson, um estudante de Medicina na UFPA, do 5° semestre, e estudante de Engenharia de Software na UNINTER. Sou fundador da Hotbot: Serviços de Automação & Marketing, uma empresa cujo propósito é o de fornecer ferramentas para automatização no nicho do marketing.
+
+Além do mais, também sou um polímata autodidata — alguém que busca estudiosamente conhecimento e especialização em diversas áreas. Assim, também tenho experiência com filosofia, lógica tradicional (aristotélica clássica), gramática tradicional e linguagens, oratória tradicional e nos estudos clássicos como um todo. Sou um ferrenho amante das Artes Liberais, uma metodologia de ensino propagada da Grécia Antiga até a Idade Média, mas que foi perdendo força com a modernização. 
+
+Um dos meus hobbies principais é o estudo. A arte de estudar para mim é indispensável, assim como a arte da leitura — coadjuvante necessário.
+
+No meu tempo livre, costumo ler obras filosóficas e práticas. Em suma, meu caráter filosófico mais entranhado é o aristotélico-tomista, com uma inclinação natural à uma vida com propósito espiritual. Portanto, em meus lazeres busco não os vícios — em vez disso, afasto-me, ou tento —, mas as virtudes.</p>
+        </section>
+        <section id="formacao-e-idiomas" class="formacao-e-idiomas">
+            <h2>Formação e idiomas</h2>
+            <ul>
+                <li>
+                    <h3>Ingles fluente</h3>
+                    <img src="./images/ingles.jpg" alt="bandeira britanica">
+                </li>
+                <li>
+                    <h3>Estudioso de Latim</h3>
+                    <img src="./images/latim.jpg" alt="latim">
+                </li>
+            </ul>
+        </section>
+        <section id="projetos" class="projetos">
+            <img src="./images/github.png" alt="github">
+            <h2>Projetos</h2>
+            <a href="https://github.com/justdavinci" target="_blank">Meu Github</a>
+        </section>
+        <section id="contato" class="contato">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <input type="tell" placeholder="Seu telefone (opcional)">
+                <textarea placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
