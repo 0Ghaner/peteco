@@ -5,17 +5,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header {
-    background-color: rgb(49, 49, 49);
+header, .container { /* estiliza o cabeçalho e corpo da página */
+    background-color: rgb(43, 43, 43);
 }
 
-.container {
-    background-color: rgb(172, 172, 172);
-}
-
-a {
+a { /* estiliza os links */
     text-decoration: none;
-    color: inherit;
+    color: rgb(17, 17, 17);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.507);
 }
 
 header .container-header{ /* estiliza o cabeçalho */
@@ -27,12 +24,12 @@ header .container-header{ /* estiliza o cabeçalho */
     margin: 0 auto;
     font-size: 2em;
     font-style: italic;
-    color: rgb(206, 206, 206);
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.507);
 }
 
-.conteudo {
-    padding: 10em 16px;
+.conteudo { 
+    padding: 9.6em 16px; /* Espaçamento interno */
     text-align: center;
 }
 
@@ -44,28 +41,21 @@ header .container-header{ /* estiliza o cabeçalho */
     padding-left: 100px;     /* Espaço lateral esquerdo */
     padding-right: 100px;    /* Espaço lateral direito */
     
-    background: linear-gradient( /* gradiente de Preto */
-        90deg,
-        #000000 0%,
-        #6b6b6b 25%,
-        #575757 50%,
-        #969696 75%,
-        #000000 100%
-    );
+    background-color: #4b4847;
     border-radius: 24px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     padding-top: 16px;
     padding-bottom: 16px;
     margin-bottom: 48px;
+    border-bottom: 1px solid #ffffff;
 }
 
 .grid-imagens img { /* estiliza as imagens */
-    width: 100%;      /* Imagem ocupa toda a célula */
-    max-height: 853px;    /* Altura fixa para todas */
-    object-fit: cover;/* Mantém proporção e cobre o espaço */
-    display: block;
-    border-radius: 12px;
+    width: 100%;      /* Largura da imagem ocupa toda a célula */
+    height: 100%;    /* Altura da imagem ocupa toda a célula */
+    border-radius: 200px;
     transition: transform 0.3s ease;
+    box-shadow: 0 0 0 8px rgba(0,0,0,0.25) inset; /* Vinheta escura interna */
 }
 
 .grid-imagens img:hover { /* efeito ao passar o mouse */
@@ -78,45 +68,27 @@ section.sobre-mim { /* estiliza a seção sobre mim */
     margin-bottom: 48px;
     padding-top: 24px;
     padding-bottom: 24px;
-    background: linear-gradient( /* gradiente de cor para a seção*/
-        180deg,
-        rgb(0, 0, 0) 0%,
-        #e3f2fd 100%
-    );
+    background: /* gradiente preto + imagem de fundo */
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('./images/euio.png');
+    background-size: cover; /* cobre toda a seção */
+    background-position: center; /* centraliza a imagem */
 }
 
-section.formacao-e-idiomas {
-    background: linear-gradient(
-        180deg,
-        rgb(0, 0, 0) 0%,
-        #f1f8e9 100%
-    );
+section.formacao-e-idiomas, section.projetos, section.contato {
+    background-color: #4b4847;
 }
 
-section.projetos {
-    background: linear-gradient(
-        180deg,
-        rgb(192, 226, 255) 0%,
-        #fffde7 100%
-    );
-}
-
-section.projetos a {
-    text-decoration: none;
+section.projetos a { /* estiliza o link da seção projetos */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
     font-weight: bold;
     font-size: 32px;
-    border-bottom: #474747 2px solid;
+    width: fit-content;
 }
 
-section.contato {
-    background: linear-gradient(
-        180deg,
-        rgb(0, 0, 0) 0%,
-        #ffebee 100%
-    );
-}
-
-.grid-imagens a {
+.grid-imagens a { /* estiliza os links das imagens */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +102,8 @@ section.contato {
     border: none;
     border-radius: 8px;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: bold;
+    text-decoration: underline;
     margin-top: 8px;
     cursor: pointer;
     transition: 0.2s;
@@ -138,37 +111,71 @@ section.contato {
 }
 
 .grid-imagens button:hover {
-    background-color: rgb(20, 20, 20); /* mais escuro ao passar o mouse */
+    background-color: rgb(92, 92, 92); /* mais escuro ao passar o mouse */
 }
 
 section.sobre-mim,
-section.formacao-e-idiomas,
-section.projetos,
-section.contato {
+section.formacao-e-idiomas { /* estiliza as seções sobre mim e formação e idiomas */
     display: flex;
-    justify-content: space-between;
-    padding: 32px 48px;
+    justify-content: space-between; /* Espaço entre os elementos */
+    padding: 32px 48px; /* Espaçamento interno */
     border-radius: 24px;
-    background: linear-gradient(
-        180deg,
-        rgb(0, 0, 0) 0%,
-        #e3f2fd 100%
-    );
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra */
     margin-bottom: 48px;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-section.sobre-mim img,
-section.projetos img {
-    width: 160px;
-    height: 160px;
-    border-radius: 16px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 12px rgba(74, 89, 199, 0.10);
+h3.ingles {
+    background-image: url('./images/ingles.jpg'); /* imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    border-radius: 12px;
+    text-shadow: 2px 2px 16px #000; /* sombra no texto */
+}
+
+h3.latim {
+    background-image: url('./images/latim.jpg'); /* imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    border-radius: 12px;
+    text-shadow: 2px 2px 16px #000; /* sombra no texto */
+}
+
+section.projetos { /* estiliza a seção projetos */
+    background-image: /* gradiente preto + imagem de fundo */
+        linear-gradient(rgba(126, 126, 126, 0.7), rgba(0,0,0,0.7)),
+        url('./images/github.png');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* sombra */
+    margin-bottom: 48px;
+    max-width: 600px; /* largura máxima */
+    margin-left: auto; /* centraliza horizontalmente */
+    margin-right: auto; /* centraliza horizontalmente */
     display: flex;
+}
+
+section.contato {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 48px;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section.formacao-e-idiomas ul {
@@ -184,7 +191,7 @@ section.formacao-e-idiomas ul {
 section.sobre-mim h2,
 section.formacao-e-idiomas h2,
 section.projetos h2,
-section.contato h2 {
+section.contato h2 { /* estiliza os títulos das seções */
     color: rgb(255, 255, 255);
     font-size: 2em;
     margin-bottom: 8px;
@@ -194,12 +201,13 @@ section.contato h2 {
     padding-bottom: 8px;
     width: 100%;
     text-align: left;
+    text-shadow: #000000 1px 1px 2px;
 }
 
 section.sobre-mim p,
 section.formacao-e-idiomas p,
 section.projetos p,
-section.contato p {
+section.contato p { /* estiliza os parágrafos das seções */
     margin-top: 16px;
     font-size: 1.2em;
     color: #ffffff;
@@ -208,23 +216,24 @@ section.contato p {
     text-shadow: #000000 1px 1px 2px;
 }
 
-section.formacao-e-idiomas li {
-    list-style: none; /* Remove o ponto da lista */
+section.formacao-e-idiomas li { /* estiliza os itens da lista na seção formação e idiomas */
     display: flex;
+    margin-top: 32px;
+    list-style: none; /* Remove o ponto da lista */
     align-items: center;
     gap: 16px; /* Espaço entre as imagens */
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 }
 
-section.formacao-e-idiomas li img {
-    width: 80px;
-    height: 80px;
+section.formacao-e-idiomas li img { /* estiliza as imagens na seção formação e idiomas */
+    width: 100px;
+    height: 100px;
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(74, 89, 199, 0.10);
 }
 
-form {
+form { /* estiliza o formulário na seção contato */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,32 +244,33 @@ form {
 
 form input,
 form textarea,
-form button {
+form button { /* estiliza os campos do formulário */
     display: block;
     width: 320px;
     margin-bottom: 8px;
     padding: 8px;
+    border-radius: 8px;
 }
 
-form textarea {
-    resize: none;
+form textarea { /* estiliza a área de texto */
+    resize: none; /* desabilita o redimensionamento */
     height: 180px;
 }
 
-section h3 {
-    margin-bottom: 16px;
-}
-
-form button {
+form button { /* estiliza o botão */
     background-color: #000000;
     color: #ecf0f1;
     border: none;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #272727;
+form button:hover { /* efeito ao passar o mouse no botão */
+    background-color: #e2e2e2; /* Inverte as cores */
+    color: #000000; /* Inverte as cores do texto */
+    transition: 0.2s ease; /* transição suave */
 }
+
+
 
 
 
