@@ -270,7 +270,13 @@ form button:hover { /* efeito ao passar o mouse no botão */
     transition: 0.2s ease; /* transição suave */
 }
 
-
-
-
-
+footer {
+    background-color: rgb(43, 43, 43); /* mesma cor do fundo da página */
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    box-shadow: 0 2px 16px 0px #fff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    width: 100%;
+}
