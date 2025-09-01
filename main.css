@@ -13,6 +13,11 @@ header {
     background-color: rgb(192, 226, 255);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header .container{ /* estiliza o cabeçalho */
     display: flex;
     padding: 16px 16px 2px 16px;
@@ -30,13 +35,6 @@ header .container{ /* estiliza o cabeçalho */
 .conteudo {
     padding: 10em 16px;
     text-align: center;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 32px;
-    border-bottom: #474747 2px solid;
 }
 
 .grid-imagens { /* grid para separar as imagens em 4 colunas e estilizar*/
@@ -101,6 +99,13 @@ section.projetos {
         rgb(192, 226, 255) 0%,
         #fffde7 100%
     );
+}
+
+section.projetos a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+    border-bottom: #474747 2px solid;
 }
 
 section.contato {
@@ -255,4 +260,6 @@ form button {
 form button:hover {
     background-color: #2986ff;
 }
+
+
 
